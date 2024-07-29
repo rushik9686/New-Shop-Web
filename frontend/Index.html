@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShoppingWeb</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">ShoppingWeb</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+      </div>
+      <div class="user-cart">
+        <a href="login.html">Login</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      </div>
+    </header>
+    <main>
+      <section class="banner">
+        <h1>Welcome to ShoppingWeb</h1>
+        <p>Discover our latest collection</p>
+      </section>
+      <section class="filters">
+        <label for="category">Category:</label>
+        <select id="category">
+          <option value="all">All</option>
+          <option value="clothing">Clothing</option>
+          <option value="electronics">Electronics</option>
+          <option value="accessories">Accessories</option>
+        </select>
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+          <option value="popularity">Popularity</option>
+          <option value="price-low-high">Price: Low to High</option>
+          <option value="price-high-low">Price: High to Low</option>
+        </select>
+      </section>
+      <section class="products">
+        <div class="product-card" data-id="1">
+          <img src="assets/images/product1.jpg" alt="Product Image" />
+          <h3>Product Name 1</h3>
+          <p>$20.00</p>
+          <button class="buy-now">Buy Now</button>
+          <button class="view-details">Details</button>
+        </div>
+        <div class="product-card" data-id="2">
+          <img src="assets/images/product2.jpg" alt="Product Image" />
+          <h3>Product Name 2</h3>
+          <p>$30.00</p>
+          <button class="buy-now">Buy Now</button>
+          <button class="view-details">Details</button>
+        </div>
+        <!-- Add more product cards as needed -->
+      </section>
+      <section class="related-products">
+        <h2>Related Products</h2>
+        <div class="product-card" data-id="3">
+          <img src="assets/images/product3.jpg" alt="Product Image" />
+          <h3>Product Name 3</h3>
+          <p>$25.00</p>
+          <button class="buy-now">Buy Now</button>
+          <button class="view-details">Details</button>
+        </div>
+        <!-- More related products -->
+      </section>
+      <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review">
+          <p><strong>John Doe:</strong> Great product! Highly recommended.</p>
+        </div>
+        <div class="review">
+          <p><strong>Jane Smith:</strong> Good value for money.</p>
+        </div>
+        <!-- More reviews -->
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 ShoppingWeb. All rights reserved.</p>
+    </footer>
+
+    <!-- Product Details Modal -->
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Product Name</h2>
+        <img src="" alt="Product Image" id="modal-img" />
+        <p id="modal-description">Product description here.</p>
+        <p id="modal-price">$0.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
